@@ -65,14 +65,14 @@ export default {
     return { activeIndex: "2" };
   },
   methods: {
-    getResume() {
-      axios
-        .get("http://localhost:9999/app/index")
-        .then((resp) => console.log(resp.data))
-        .catch((Err) => alert(Err));
-      //   alert("this is resume");
-      //   axios.
-    },
+    // getResume() {
+    //   axios
+    //     .get("http://localhost:9999/app/index")
+    //     .then((resp) => console.log(resp.data))
+    //     .catch((Err) => alert(Err));
+    //   //   alert("this is resume");
+    //   //   axios.
+    // },
     // toBlogs() {
     //   this.$router.push({
     //     path: "/blogs",
