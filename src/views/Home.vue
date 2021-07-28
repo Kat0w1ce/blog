@@ -20,12 +20,10 @@
           <el-menu
             default-active="2"
             class="el-menu-vertical-demo"
-            @open="handleOpen"
-            @close="handleClose"
             background-color="#545c64"
             text-color="#fff"
             active-text-color="#ffd04b"
-            router="true"
+            :router="true"
           >
             <el-menu-item index="/blogs">
               <i class="el-icon-menu"></i>
@@ -52,7 +50,9 @@
 </template>
 
 <script>
-// import axios from "axios.js";
+// import VueAxios from "vue-axios";
+import axios from "axios";
+axios.defaults.baseURL = "/api";
 export default {
   name: "home",
   data() {
@@ -60,6 +60,10 @@ export default {
   },
   methods: {
     getResume() {
+      axios
+        .get("http://localhost:9999/app/index")
+        .then((resp) => console.log(resp.data))
+        .catch((Err) => alert(Err));
       //   alert("this is resume");
       //   axios.
     },
