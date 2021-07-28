@@ -8,7 +8,13 @@
           mode="horizontal"
         >
           <el-menu-item index="1">主页</el-menu-item>
-          <el-menu-item index="2" @click="getResume">简历</el-menu-item>
+          <el-menu-item index="2">
+            <el-link
+              href="http://localhost:5000/resume.pdf"
+              download="note-rs.pdf"
+              >简历</el-link
+            >
+          </el-menu-item>
           <el-menu-item index="3">
             <el-link href="https://www.baidu.com">github</el-link>
           </el-menu-item>
